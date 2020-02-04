@@ -19,3 +19,10 @@ const findOutlier = integers => {
 }
 
 console.log(findOutlier([2,6,8,10,3]))
+
+// Best solution
+const findOutlier2 = int => {
+    let even = int.filter(a => a % 2 == 0)
+    let odd = int.filter(a=> a % 2 !== 0)
+    return even.length == 1 ? even[0] : odd[0]
+}
